@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: supportdesk
+      POSTGRES_PASSWORD: supportdesk
+      POSTGRES_DB: supportdesk
+    ports:
+      - "5433:5432"
+    volumes:
+      - supportdesk_data:/var/lib/postgresql/data
+
+volumes:
+  supportdesk_data:
